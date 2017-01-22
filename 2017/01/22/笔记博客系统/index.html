@@ -1,0 +1,749 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="随笔," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="南山" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="序言国内的云笔记这些天又走了之前网盘的老路，限制免费用户。更有甚者，甚至连网络同步功能直接关闭。我都不知道，连同步功能都没有还叫什么云笔记 。
+同时hexo博客也出了些问题，博客部署到github上，由于外网的原因，打开速度特别慢。有时可能不在同一台电脑上写博客，所以还要同步博客的源文件。博客的源文件文件数量很多，同步起来有点慢。另外博客源文件并不想暴露出来，要设为私有库。我的私有库受时间限制，只">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优化笔记博客系统">
+<meta property="og:url" content="http://yoursite.com/2017/01/22/笔记博客系统/index.html">
+<meta property="og:site_name" content="南山">
+<meta property="og:description" content="序言国内的云笔记这些天又走了之前网盘的老路，限制免费用户。更有甚者，甚至连网络同步功能直接关闭。我都不知道，连同步功能都没有还叫什么云笔记 。
+同时hexo博客也出了些问题，博客部署到github上，由于外网的原因，打开速度特别慢。有时可能不在同一台电脑上写博客，所以还要同步博客的源文件。博客的源文件文件数量很多，同步起来有点慢。另外博客源文件并不想暴露出来，要设为私有库。我的私有库受时间限制，只">
+<meta property="og:image" content="http://yoursite.com/assets/preview_windows.png">
+<meta property="og:image" content="http://yoursite.com/assets/import.png">
+<meta property="og:updated_time" content="2017-01-22T11:35:52.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="优化笔记博客系统">
+<meta name="twitter:description" content="序言国内的云笔记这些天又走了之前网盘的老路，限制免费用户。更有甚者，甚至连网络同步功能直接关闭。我都不知道，连同步功能都没有还叫什么云笔记 。
+同时hexo博客也出了些问题，博客部署到github上，由于外网的原因，打开速度特别慢。有时可能不在同一台电脑上写博客，所以还要同步博客的源文件。博客的源文件文件数量很多，同步起来有点慢。另外博客源文件并不想暴露出来，要设为私有库。我的私有库受时间限制，只">
+<meta name="twitter:image" content="http://yoursite.com/assets/preview_windows.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 优化笔记博客系统 | 南山 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?ec8b6af508745d33e4ac8a024f169b1b";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">南山</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                优化笔记博客系统
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-01-22T00:00:00+08:00" content="2017-01-22">
+              2017-01-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/01/22/笔记博客系统/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/01/22/笔记博客系统/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>国内的云笔记这些天又走了之前网盘的老路，限制免费用户。更有甚者，甚至连网络同步功能直接关闭。我都不知道，连同步功能都没有还叫什么云笔记 。</p>
+<p>同时hexo博客也出了些问题，博客部署到github上，由于外网的原因，打开速度特别慢。有时可能不在同一台电脑上写博客，所以还要同步博客的源文件。博客的源文件文件数量很多，同步起来有点慢。另外博客源文件并不想暴露出来，要设为私有库。我的私有库受时间限制，只能去找别的托管网站。</p>
+<a id="more"></a>
+<p>注:<strong>gitbook即是一个工具的名称，也是一个网站的名称。</strong></p>
+<h2 id="云笔记"><a href="#云笔记" class="headerlink" title="云笔记"></a>云笔记</h2><p>近些天国内的各种云笔记又走了国内网盘的老路，限制免费用户，直觉告诉我可能要有一波云笔记要倒闭，只能想别的办法。</p>
+<h3 id="为知笔记"><a href="#为知笔记" class="headerlink" title="为知笔记"></a>为知笔记</h3><p>之前笔者一直用的是为知笔记。各种功能还算齐全。支持Markdown，还有Linux客户端，运行的也很稳定，用了快一年的时间，体验还是相当不错的。但是可能是受资金影响的原因，限制免费用户单机运行，云笔记成了记事本。而且导出功能并不是特别方便。</p>
+<h3 id="蚂蚁笔记"><a href="#蚂蚁笔记" class="headerlink" title="蚂蚁笔记"></a>蚂蚁笔记</h3><p>当我放弃了为知笔记的时候，想迁移到这个云笔记上面，开源，免费，功能强大。在github上有好几千star，支持Linux客户端。主题漂亮。但是运行的不是特别稳定，还没来得及迁移到上面，这个云笔记又成免费用户单机版。</p>
+<h3 id="有道云笔记"><a href="#有道云笔记" class="headerlink" title="有道云笔记"></a>有道云笔记</h3><p>没办法只能继续挪窝，同时对云笔记市场表示担忧，感觉迟早要完蛋的感觉。支持Markdown的云笔记，大厂出品。虽然UI不太接受，同时也不支持Linux，但是还可以勉强用。用了两天，神奇的发现网易这么大的公司，投入这么多宣传，竟然也有这么不靠谱的产品。首先，笔记做长了，卡顿。这都不说了，神奇的还在后面，最操蛋的是<strong>Markdown不支持内部图片链接，也就是说所有的图片只能用外链</strong>。目前比较靠谱的解决方法，是把图片文件夹分享成外链再弄，总是让人感觉不舒服。还继续挪窝吧，靠谱的云笔记且支持Markdown貌似是不好找了。</p>
+<h2 id="gitbook"><a href="#gitbook" class="headerlink" title="gitbook"></a>gitbook</h2><p>最后我是抛弃了云笔记，选择了<strong>gitbook+私有库</strong>来解决问题。虽然gitbook的社区并不算强大，但是好歹也是有个社区，可以提供一些插件。</p>
+<blockquote>
+<p><strong>gitbook有以下好处</strong></p>
+</blockquote>
+<ul>
+<li><strong>git</strong>作为同步工具，svn也行。</li>
+<li>完美支持MarkDown,解决部分云笔记不支持MarkDown问题.</li>
+<li>跨平台。</li>
+<li>资源导出方便，通过gitbook官网或本地插件可以导出<strong>多种通用格式</strong>，包括epub,mobi，pdf等。</li>
+<li>不担心小公司倒闭，或者要挟收费，这家不好换那家。实在不行，自己建库。再不行，网盘同步。</li>
+<li>可以部署到博客上。</li>
+</ul>
+<p>至于gitbook的配置搭建就不说了，官网有详细教程<a href="https://toolchain.gitbook.com" target="_blank" rel="external"> toolchain documentation.</a>。如果感觉npm慢的话，可以切换成阿里的源。只要执行下面一句就好</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry http://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>安装好gitbook后，可以下载一个<strong>GitBook Editor</strong>，它是gitbook官网的编辑器。这个编辑器到目前还不够完善，但是已经可用。感觉不好用的话，可以用各种MarkDown工具代替。</p>
+<p><img src="/assets/preview_windows.png" alt=""></p>
+<h3 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h3><p>网上的教程有很多介绍插件的，我推荐安装的一个插件是toggle-chapters。原生的gitbook不支持隐藏二级目录。加上这个插件，方便笔记管理。</p>
+<p>下载命令:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install gitbook-plugin-toggle-chapters</span><br></pre></td></tr></table></figure>
+<p>配置book.json</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;plugins&quot;: [&quot;toggle-chapters&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="私有库"><a href="#私有库" class="headerlink" title="私有库"></a>私有库</h3><p>如果用gitbook作为同步网站的话，那么你的所有的笔记都是公开可见的，因为我有些只适合于做笔记。因此并不想公开展示。所以可以在github上开设私有库。如果没有github私有库，可以选择国内的一些托管平台。我用的是coding。把整个GitBook Editor的产生电子书的文件夹下，配置远程库。然后在gitbook Editor<br>上点击<code>SAVE</code>保存再提交。非常方便。</p>
+<p><img src="/assets/import.png" alt=""></p>
+<h3 id="gitbook部署"><a href="#gitbook部署" class="headerlink" title="gitbook部署"></a>gitbook部署</h3><p>我们可以为一个gitbook单独建立一个项目，配置项目pages。执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitbook build</span><br></pre></td></tr></table></figure>
+<p>生成网站，然后把生成的_book文件夹上传开启项目pages就行。用户也可以配置单独的域名。</p>
+<p>这只是其中一种方法，如果用gitbook同步,本身就是部署好的。部署到国内的托管平台，速度会快一点。</p>
+<h2 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h2><p>之前我的这个博客是用hexo部署到github上的。然后再把blog的源文件部署成私有库。即这个博客有两个库，一个是blog的库，一个是博客的源库。用了一段时间之后发现了有有个问题。</p>
+<ul>
+<li>因为github的服务器在海外，所以blog访问速度有点慢。</li>
+<li>github的私有库要钱，但是同步的博客的源文件并不想公开。我的私有库有时间限制。</li>
+</ul>
+<h3 id="双库部署"><a href="#双库部署" class="headerlink" title="双库部署"></a>双库部署</h3><p>针对访问速度慢，我的解决方案是这样的。</p>
+<p>hexo部署的时候部署到两个库一个是github，一个是coding。如果乐意，可以把所有的git项目托管到多个平台上，这样更安全。愿意的同学，可以到网上找找，一个git项目如何配置多个远程库，很简单。这里不加介绍，<strong>下面是博客的多库部署，配置。并不是git项目的多平台托管。</strong></p>
+<p>修改配置文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: </span><br><span class="line">            github: xxx</span><br><span class="line">            coding: xxx</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p>同时配置域名解析，<strong>把一个域名解析到两个博客上，海外设置访问github。国内设置访问coding。</strong>之前一直是用github，毕竟github社区是无可比拟的，但是之后我可能会把私有库移植到国内的托管平台，速度更快。</p>
+<h3 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h3><ul>
+<li>博客源文件同步会可能回到<code>Filename too long</code>的问题。</li>
+</ul>
+<p>在Git bash中，运行下列命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.longpaths true</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同步博客源文件，主题同步不上。</li>
+</ul>
+<p>删除主题目录下的.git文件夹就行了。</p>
+<h2 id="尾言"><a href="#尾言" class="headerlink" title="尾言"></a>尾言</h2><p>目前来看问题基本解决，不用担心某个托管网站停服，因为git项目迁移很方便。唯一担心的是一夜之间所有的托管平台，限制普通用户不能用私有库。学习gitbook的话可以参考以下这篇<a href="http://gitbook.zhangjikai.com/index.html" target="_blank" rel="external">博客</a></p>
+
+      
+    </div>
+    
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+<div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center">
+  <div>感谢你的支持！</div>
+  <button id="rewardButton", disable="enable", onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}", style="cursor: pointer; border: 0; outline: 0; border-radius: 100%; padding: 0; margin: 0; letter-spacing: normal; text-transform: none; text-indent: 0px; text-shadow: none">
+    <span onmouseover="this.style.color='rgb(236,96,0)';this.style.background='rgb(204,204,204)'" onMouseOut="this.style.color='#fff';this.style.background='rgb(236,96,0)'" style="display: inline-block; width: 70px; height: 70px; border-radius: 100%; line-height: 81px; color: #fff; font: 400 35px/75px 'microsofty'; background: rgb(236,96,0)">赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/update/money2.png" alt="张亚飞 WeChat Pay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>微信打赏</p>
+      </div>
+    
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/update/money.jpg" alt="张亚飞 Alipay" style="width: 200px; max-width: 100%; display: inline-block"/>
+        <p>支付宝打赏</p>
+      </div>
+    
+  </div>
+</div>
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/随笔/" rel="tag">#随笔</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/25/ReverseInteger解题报告/" rel="next" title="ReverseInteger解题报告">
+                <i class="fa fa-chevron-left"></i> ReverseInteger解题报告
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/01/22/笔记博客系统/"
+           data-title="优化笔记博客系统" data-url="http://yoursite.com/2017/01/22/笔记博客系统/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/update/saber.jpg"
+               alt="张亚飞" />
+          <p class="site-author-name" itemprop="name">张亚飞</p>
+          <p class="site-description motion-element" itemprop="description">不实知，谨慎言</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/fatezy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element">
+            <div class="links-of-blogroll-title">
+              <i class="fa fa-globe fa-fw"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tianle.me/" title="moving" target="_blank">moving</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#序言"><span class="nav-number">1.</span> <span class="nav-text">序言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#云笔记"><span class="nav-number">2.</span> <span class="nav-text">云笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为知笔记"><span class="nav-number">2.1.</span> <span class="nav-text">为知笔记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#蚂蚁笔记"><span class="nav-number">2.2.</span> <span class="nav-text">蚂蚁笔记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有道云笔记"><span class="nav-number">2.3.</span> <span class="nav-text">有道云笔记</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gitbook"><span class="nav-number">3.</span> <span class="nav-text">gitbook</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插件"><span class="nav-number">3.1.</span> <span class="nav-text">插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#私有库"><span class="nav-number">3.2.</span> <span class="nav-text">私有库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#gitbook部署"><span class="nav-number">3.3.</span> <span class="nav-text">gitbook部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客"><span class="nav-number">4.</span> <span class="nav-text">博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#双库部署"><span class="nav-number">4.1.</span> <span class="nav-text">双库部署</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">4.2.</span> <span class="nav-text">遇到的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#尾言"><span class="nav-number">5.</span> <span class="nav-text">尾言</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">张亚飞</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"coderchat"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
