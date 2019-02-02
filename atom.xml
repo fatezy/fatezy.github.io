@@ -135,78 +135,6 @@
   </entry>
   
   <entry>
-    <title>知识库</title>
-    <link href="http://yoursite.com/2016/05/19/%E7%9F%A5%E8%AF%86%E5%BA%93/"/>
-    <id>http://yoursite.com/2016/05/19/知识库/</id>
-    <published>2016-05-19T14:53:04.000Z</published>
-    <updated>2017-01-22T11:35:52.143Z</updated>
-    
-    <content type="html">&lt;h2 id=&quot;0x1-序&quot;&gt;&lt;a href=&quot;#0x1-序&quot; class=&quot;headerlink&quot; title=&quot;0x1 序&quot;&gt;&lt;/a&gt;0x1 序&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt; 这篇博客收录了一些我品读过大牛的优秀的博文 ！&lt;/strong&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;0x2-程序人生&quot;&gt;&lt;a href=&quot;#0x2-程序人生&quot; class=&quot;headerlink&quot; title=&quot;0x2 程序人生&quot;&gt;&lt;/a&gt;0x2 程序人生&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://coolshell.cn/articles/4990.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;程序员技术练级攻略&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://coolshell.cn/articles/1695.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;别的程序员是怎么读你的简历的&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;0x3-算法&quot;&gt;&lt;a href=&quot;#0x3-算法&quot; class=&quot;headerlink&quot; title=&quot;0x3 算法&quot;&gt;&lt;/a&gt;0x3 算法&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.raychase.net/2763&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;LeetCode算法题目解答汇总&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;0x4-数据库&quot;&gt;&lt;a href=&quot;#0x4-数据库&quot; class=&quot;headerlink&quot; title=&quot;0x4 数据库&quot;&gt;&lt;/a&gt;0x4 数据库&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://coolshell.cn/articles/1846.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;MySQL性能优化的最佳20+条经验&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;0x5-jvm&quot;&gt;&lt;a href=&quot;#0x5-jvm&quot; class=&quot;headerlink&quot; title=&quot;0x5 jvm&quot;&gt;&lt;/a&gt;0x5 jvm&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://ifeve.com/java-permgen-removed/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Java PermGen 去哪里了?&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;0x6-java框架技术&quot;&gt;&lt;a href=&quot;#0x6-java框架技术&quot; class=&quot;headerlink&quot; title=&quot;0x6 java框架技术&quot;&gt;&lt;/a&gt;0x6 java框架技术&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://ifeve.com/spring-interview-questions-and-answers/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;69道Spring面试题和答案&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;0x7-java基础&quot;&gt;&lt;a href=&quot;#0x7-java基础&quot; class=&quot;headerlink&quot; title=&quot;0x7 java基础&quot;&gt;&lt;/a&gt;0x7 java基础&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/ns_code/article/details/36034955&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;【Java集合源码剖析】HashMap源码剖析&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://blog.csdn.net/ns_code/article/details/35568011&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;【Java集合源码剖析】ArrayList源码剖析&lt;/a&gt;&lt;br&gt; &lt;a href=&quot;http://www.importnew.com/19816.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;攻破JAVA NIO技术壁垒&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;0x8-编译原理&quot;&gt;&lt;a href=&quot;#0x8-编译原理&quot; class=&quot;headerlink&quot; title=&quot;0x8 编译原理&quot;&gt;&lt;/a&gt;0x8 编译原理&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://acbingo.cn/2016/03/29/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86_%E4%B8%AD%E7%A7%91%E5%A4%A7%E5%85%AC%E5%BC%80%E8%AF%BE_%E7%AC%AC%E4%B8%80%E5%8D%95%E5%85%83%E7%BC%96%E8%AF%91%E5%99%A8%E4%BB%8B%E7%BB%8D%E4%BD%9C%E4%B8%9A/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Sum编译器&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;http://www.kawabangga.com/posts/1147&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;一个词法分析器的简单实现&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;0x9-系统设计&quot;&gt;&lt;a href=&quot;#0x9-系统设计&quot; class=&quot;headerlink&quot; title=&quot;0x9 系统设计&quot;&gt;&lt;/a&gt;0x9 系统设计&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.raychase.net/730&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;DAO的演进&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;0x1-序&quot;&gt;&lt;a href=&quot;#0x1-序&quot; class=&quot;headerlink&quot; title=&quot;0x1 序&quot;&gt;&lt;/a&gt;0x1 序&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt; 这篇博客收录了一些我品读过大牛的优秀的博文 ！&lt;/strong&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>爬取教务在线学生相片</title>
-    <link href="http://yoursite.com/2016/05/14/%E7%88%AC%E5%8F%96%E6%95%99%E5%8A%A1%E5%9C%A8%E7%BA%BF%E5%AD%A6%E7%94%9F%E7%9B%B8%E7%89%87/"/>
-    <id>http://yoursite.com/2016/05/14/爬取教务在线学生相片/</id>
-    <published>2016-05-14T10:43:19.000Z</published>
-    <updated>2017-01-22T11:35:52.140Z</updated>
-    
-    <content type="html">&lt;p&gt;最近看了下python,发现python用来做爬虫确实方便，就随手爬去了学校教务在线的学生照片，用到了正则匹配与python的request模块。以下是爬虫代码。&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;27&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;28&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;29&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;30&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#-*_coding:utf8-*-&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; requests&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;from&lt;/span&gt; imp &lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; reload&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;import&lt;/span&gt; re&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;spider&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(object)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;__init__&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(self)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        print( &lt;span class=&quot;string&quot;&gt;u&#39;开始爬取内容。。。&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#getsource用来获取网页源代码&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;getsource&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(self,url)&lt;/span&gt;:&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        html = requests.get(url)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;return&lt;/span&gt; html.text&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#total_page 表示结束的学号&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#range 表示起始学号&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt; __name__ == &lt;span class=&quot;string&quot;&gt;&#39;__main__&#39;&lt;/span&gt;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    url = &lt;span class=&quot;string&quot;&gt;&#39;http://jwzx.cqupt.edu.cn/showstuPic.php?xh=2014213194&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    html = &lt;span class=&quot;string&quot;&gt;&#39;http://jwzx.cqupt.edu.cn/showstuPic.php?xh=2014213194&#39;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    total_page = &lt;span class=&quot;number&quot;&gt;2014213230&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt; i &lt;span class=&quot;keyword&quot;&gt;in&lt;/span&gt; range(&lt;span class=&quot;number&quot;&gt;2014213180&lt;/span&gt;,total_page+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;):&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        new_link = re.sub(&lt;span class=&quot;string&quot;&gt;&#39;xh=\d+&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;xh=%d&#39;&lt;/span&gt;%i,html,re.S)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        &lt;span class=&quot;keyword&quot;&gt;print&lt;/span&gt; (new_link)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        pic = requests.get(new_link)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        fp = open(&lt;span class=&quot;string&quot;&gt;&#39;pic2\\&#39;&lt;/span&gt; + str(i) + &lt;span class=&quot;string&quot;&gt;&#39;.jpg&#39;&lt;/span&gt;,&lt;span class=&quot;string&quot;&gt;&#39;wb&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        fp.write(pic.content)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        fp.close()&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近看了下python,发现python用来做爬虫确实方便，就随手爬去了学校教务在线的学生照片，用到了正则匹配与python的request模块。以下是爬虫代码。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>java PermGen 去哪了</title>
     <link href="http://yoursite.com/2016/05/14/java-PermGen-%E5%8E%BB%E5%93%AA%E4%BA%86/"/>
     <id>http://yoursite.com/2016/05/14/java-PermGen-去哪了/</id>
@@ -473,9 +401,9 @@ at OutOfMemory.RuntimeConstantPoolOOM.main(RuntimeConstantPoolOOM.java:26)
     
       <category term="leetcode" scheme="http://yoursite.com/tags/leetcode/"/>
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
-    
       <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
     
   </entry>
   

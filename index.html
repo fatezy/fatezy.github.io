@@ -511,8 +511,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/19/知识库/" itemprop="url">
-                  知识库
+                <a class="post-title-link" href="/2016/05/14/java-PermGen-去哪了/" itemprop="url">
+                  java PermGen 去哪了
                 </a>
               
             
@@ -525,8 +525,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-19T22:53:04+08:00" content="2016-05-19">
-              2016-05-19
+            <time itemprop="dateCreated" datetime="2016-05-14T15:42:45+08:00" content="2016-05-14">
+              2016-05-14
             </time>
           </span>
 
@@ -539,8 +539,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/其他/" itemprop="url" rel="index">
-                    <span itemprop="name">其他</span>
+                  <a href="/categories/jvm/" itemprop="url" rel="index">
+                    <span itemprop="name">jvm</span>
                   </a>
                 </span>
 
@@ -555,8 +555,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/19/知识库/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/19/知识库/" itemprop="commentsCount"></span>
+                <a href="/2016/05/14/java-PermGen-去哪了/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/14/java-PermGen-去哪了/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -580,10 +580,11 @@
 
       
         
-          <h2 id="0x1-序"><a href="#0x1-序" class="headerlink" title="0x1 序"></a>0x1 序</h2><blockquote>
-<p><strong> 这篇博客收录了一些我品读过大牛的优秀的博文 ！</strong><br>
+          <h3 id="Java-PermGen-去哪里了"><a href="#Java-PermGen-去哪里了" class="headerlink" title="Java PermGen 去哪里了?"></a>Java PermGen 去哪里了?</h3><p><a href="http://www.infoq.com/articles/Java-PERMGEN-Removed">原文链接</a>：原文作者：Monica Beckwith  以下为本人翻译，仅用于交流学习，版权归原作者和InfoQ所有，转载注明出处，请不要用于商业用途</p>
+<p>在Java虚拟机(JVM)内部，class文件中包括类的版本、字段、方法、接口等描述信息，还有运行时常量池，用于存放编译器生成的各种字面量和符号引用。</p>
+<p>在过去（自定义类加载器还不是很常见的时候），类大多是”static”的，很少被卸载或收集，因此被称为“永久的(Permanent)”。同时，由于类class是JVM实现的一部分，并不是由应用创建的，所以又被认为是“非堆(non-heap)”内存。</p>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/19/知识库/#more" rel="contents">
+            <a class="btn" href="/2016/05/14/java-PermGen-去哪了/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -634,8 +635,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/05/14/爬取教务在线学生相片/" itemprop="url">
-                  爬取教务在线学生相片
+                <a class="post-title-link" href="/2016/05/12/comparator接口与Comparable接口的区别/" itemprop="url">
+                  comparator接口与Comparable接口的区别
                 </a>
               
             
@@ -648,8 +649,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-14T18:43:19+08:00" content="2016-05-14">
-              2016-05-14
+            <time itemprop="dateCreated" datetime="2016-05-12T20:31:44+08:00" content="2016-05-12">
+              2016-05-12
             </time>
           </span>
 
@@ -662,8 +663,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/python/" itemprop="url" rel="index">
-                    <span itemprop="name">python</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
 
@@ -678,8 +679,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/14/爬取教务在线学生相片/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/14/爬取教务在线学生相片/" itemprop="commentsCount"></span>
+                <a href="/2016/05/12/comparator接口与Comparable接口的区别/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/12/comparator接口与Comparable接口的区别/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -703,9 +704,12 @@
 
       
         
-          <p>最近看了下python,发现python用来做爬虫确实方便，就随手爬去了学校教务在线的学生照片，用到了正则匹配与python的request模块。以下是爬虫代码。</p>
+          <h5 id="1-Comparator-和-Comparable-相同的地方"><a href="#1-Comparator-和-Comparable-相同的地方" class="headerlink" title="1. Comparator 和 Comparable 相同的地方"></a>1. Comparator 和 Comparable 相同的地方</h5><p>他们都是java的一个接口, 并且是用来对自定义的class比较大小的,</p>
+<p>什么是自定义class: 如 public class Person{ String name; int age }.</p>
+<p>当我们有这么一个personList,里面包含了person1, person2, persion3….., 我们用Collections.sort( personList ), </p>
+<p>是得不到预期的结果的. 这时肯定有人要问, 那为什么可以排序一个字符串list呢:<br>
           <div class="post-more-link text-center">
-            <a class="btn" href="/2016/05/14/爬取教务在线学生相片/#more" rel="contents">
+            <a class="btn" href="/2016/05/12/comparator接口与Comparable接口的区别/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -780,7 +784,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -788,7 +792,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -797,7 +801,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
